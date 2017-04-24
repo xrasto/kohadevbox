@@ -11,4 +11,4 @@
     repo: "{{ koha_git_repo }}"
     dest: "{{ koha_dir }}"
     version: "{{ koha_git_branch }}"
-  when: not sync_repo
+  when: not sync_repo and koha_git_repo_clone
