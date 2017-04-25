@@ -6,6 +6,7 @@
     group: vagrant
     mode: 0775
     recurse: yes
+  when: sync_repo or koha_git_repo_clone
 - name: Koha source | Clone repository
   git:
     repo: "{{ koha_git_repo }}"
